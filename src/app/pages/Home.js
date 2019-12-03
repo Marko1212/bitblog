@@ -1,21 +1,24 @@
 import React from 'react'
-import Post from '../components/post/Post'
+
+import { Link } from 'react-router-dom'
+import PostPage from '../components/post/PostPage'
+import PostSnippet from '../components/post/PostSnippet';
+
 
 
 class Home extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
-
-
     render() {
-        return <>
-            <h2>POSTS</h2>
-            <Post />
-            <Post />
-            <Post />
-        </>
+        return (
+            <main>
+                <h1>POSTS</h1>
+
+                <PostSnippet post={{ id: 345, title: "sdkfj" }} />
+                <PostSnippet post={{}} />
+                <PostSnippet post={{}} />
+                <PostSnippet post={{}} />
+                <PostSnippet post={{}} />
+            </main>
+        );
     }
 }
 
