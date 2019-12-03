@@ -13,7 +13,7 @@ class Home extends React.Component {
                 <h1>POSTS</h1>
 
                 <PostSnippet post={{ id: 345, title: "sdkfj" }} />
-                <PostSnippet post={{}} />
+                <PostSnippet post={{ id: 456, title: 'fff' }} />
                 <PostSnippet post={{}} />
                 <PostSnippet post={{}} />
                 <PostSnippet post={{}} />
