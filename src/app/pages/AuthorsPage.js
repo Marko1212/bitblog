@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
-const Author = (props) => {
+const AuthorsPage = (props) => {
     return <>
 
         <h1>SINGLE POST TITLE</h1>
 
-        <p><Link to="/author">Author Name</Link></p >
+        <p><Link to="/authors">Author Name</Link></p >
 
 
 
@@ -14,4 +14,4 @@ const Author = (props) => {
 
 }
 
-export default Author;
+export default AuthorsPage;
