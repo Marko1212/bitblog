@@ -1,38 +1,41 @@
 import React from 'react'
 import { Switch, Route } from "react-router-dom";
 import PostSnippet from '../components/post/PostSnippet'
-import { FetchPosts } from '../../services/PostService'
+import { fetchSinglePost } from '../../services/PostService';
+import AuthorName from '../components/author/AuthorName'
 
 
 class SinglePost extends React.Component {
     constructor(props) {
         super(props)
+
+        this.id = this.props.match.params.postId;
+
         this.state = {
-            singlePost: []
+            post: null
         }
     }
 
     componentDidMount() {
-
-        FetchPosts().then(post => this.setState({ singlePost: post }))
+        fetchSinglePost(this.id)
+            .then(post => this.setState({ post: post }))
     }
 
     render() {
-
-        if (this.state.singlePost.length === 0) {
+        if (!this.state.post) {
             return <h3>LOADING</h3>
 
         }
 
-
-
-        const id = this.props.match.params.postId;
-
         return <main>
-            <h1>{this.state.singlePost[id - 1].title}</h1>
+            <h1>{this.state.post.title}</h1>
+
+            <AuthorName authorId={this.state.post.userId} />
+
+            <div>sdlfkjdsflkdjsfld</div>
+
+            {/* <UserLatestPosts authorId ={this.state.post.userId} /> */}
         </main>
-
-
     }
 }
 
