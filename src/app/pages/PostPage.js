@@ -14,7 +14,7 @@ class PostPage extends React.Component {
             allPosts: []
         }
     }
-    a
+
 
     componentDidMount() {
         FetchPosts().then(posts => this.setState({ allPosts: posts }))
@@ -36,18 +36,12 @@ class PostPage extends React.Component {
 
         return (
             <main>
-                <h1>POSTS</h1>
+                <h1 className='homeHeader'>POSTS</h1>
 
                 {mapPost}
 
 
-                {/*        <PostSnippet post={{ id: this.state.allPosts[0].id, title: this.state.allPosts[0].title, text: this.state.allPosts[0].body }} />
-                <PostSnippet post={{
-                    id: this.state.allPosts[1].id, title: this.state.allPosts[1].title, text: this.state.allPosts[1].body
-                }} />
-                <PostSnippet post={{ id: this.state.allPosts[2].id, title: this.state.allPosts[2].title, text: this.state.allPosts[2].body }} />
-                <PostSnippet post={{}} />
-                <PostSnippet post={{}} /> */}
+
             </main>
         );
     }

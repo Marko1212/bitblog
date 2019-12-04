@@ -23,8 +23,16 @@ code {
 
 main {
   flex: 1 0 auto;
-  width: 70%;
+  width: 50%;
   margin: 0 auto
+}
+
+.homeHeader {
+  text-align: center;
+}
+.authorName {
+  text-align: center;
+
 }
 
     
