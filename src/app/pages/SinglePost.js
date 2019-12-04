@@ -1,20 +1,20 @@
 import React from 'react'
 import { Switch, Route } from "react-router-dom";
-import PostSnippet from './PostSnippet'
+import PostSnippet from '../components/post/PostSnippet'
 
 
-class PostPage extends React.Component {
+class SinglePost extends React.Component {
     componentDidMount() {
         console.log(this.props);
 
     }
     render() {
         return <>
-            <h1>Post Page {this.props.match.params.postId}</h1>
+            <h1>Post {this.props.match.params.postId}</h1>
         </>
 
 
     }
 }
 
-export default PostPage
+export default SinglePost

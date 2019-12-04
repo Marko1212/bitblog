@@ -1,12 +1,11 @@
 import React from 'react'
 
 import { Link } from 'react-router-dom'
-import PostPage from '../components/post/PostPage'
 import PostSnippet from '../components/post/PostSnippet';
 
 
 
-class Home extends React.Component {
+class PostPage extends React.Component {
     render() {
         return (
             <main>
@@ -23,4 +22,4 @@ class Home extends React.Component {
 }
 
 
-export default Home;
+export default PostPage;
