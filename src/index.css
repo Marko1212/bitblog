@@ -23,7 +23,7 @@ code {
 
 main {
   flex: 1 0 auto;
-  width: 50%;
+  width: 80%;
   margin: 0 auto
 }
 
@@ -32,7 +32,33 @@ main {
 }
 .authorName {
   text-align: center;
+  font-size: 1.5rem;
 
 }
+
+.nameSurname {
+  border: 1px solid black;
+  display: block;
+  margin-left: 0%;
+}
+
+.nameSurname > h1 {
+font-size: 1rem;
+line-height: 1%;
+}
+
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+.nameSurnameBox > h1 {
+  font-size: 2rem;
+
+}
+
+
+
+
 
     
