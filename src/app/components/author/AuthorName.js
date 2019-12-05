@@ -16,6 +16,8 @@ class AuthorName extends React.Component {
     componentDidMount() {
         fetchSingleAuthor(this.props.authorId)
             .then(author => this.setState({ author: author }))
+
+        console.log(this.state.author);
     }
 
 

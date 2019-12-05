@@ -34,7 +34,7 @@ class SinglePost extends React.Component {
 
             <div>sdlfkjdsflkdjsfld</div>
 
-            {/* <UserLatestPosts authorId ={this.state.post.userId} /> */}
+            {/*  <UserLatestPosts authorId={this.state.post.userId} /> */}
         </main>
     }
 }

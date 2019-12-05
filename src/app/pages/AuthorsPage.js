@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import { FetchAuthors } from '../../services/AuthorService'
-import { fetchNumberOfPosts } from '../../services/PostService'
+
+import PostCounter from '../components/author/PostCounter'
 
 
 class AuthorsPage extends React.Component {
@@ -31,7 +32,10 @@ class AuthorsPage extends React.Component {
 
                 {this.state.allAuthor.map(author => {
 
-                    return <p className='authorName'><Link to={`/authors/${author.id}`}>{author.name}</Link></p >
+                    return <p className='authorName'><Link to={`/authors/${author.id}`}>{author.name}
+                        <PostCounter authorId={author.id} />
+
+                    </Link></p >
 
 
 

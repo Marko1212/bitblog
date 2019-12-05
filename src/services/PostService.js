@@ -23,15 +23,9 @@ const fetchAuthorPost = (idAuthor) => {
 
 }
 
-const fetchNumberOfPosts = (idAuthor) => {
-
-    return fetch('https://jsonplaceholder.typicode.com/posts?userId=' + idAuthor)
-    .then(res => res.json())
-    .then(data => data.length)
-
-}
 
 
 
 
-export { FetchPosts, fetchSinglePost, fetchAuthorPost, fetchNumberOfPosts };
+
+export { FetchPosts, fetchSinglePost, fetchAuthorPost };
