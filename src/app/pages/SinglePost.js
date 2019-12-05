@@ -3,13 +3,12 @@ import { Switch, Route } from "react-router-dom";
 import PostSnippet from '../components/post/PostSnippet'
 import { fetchSinglePost } from '../../services/PostService';
 import AuthorName from '../components/author/AuthorName'
+import AuthorLatestPost from '../components/author/AuthorLatestPost';
 
 
 class SinglePost extends React.Component {
     constructor(props) {
         super(props)
-
-        this.id = this.props.match.params.postId;
 
         this.state = {
             post: null
@@ -17,9 +16,21 @@ class SinglePost extends React.Component {
     }
 
     componentDidMount() {
-        fetchSinglePost(this.id)
+        fetchSinglePost(this.props.match.params.postId)
             .then(post => this.setState({ post: post }))
     }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.match.params.postId !== this.props.match.params.postId) {
+            fetchSinglePost(this.props.match.params.postId)
+                .then(post => this.setState({ post: post }))
+        }
+
+
+
+    }
+
+
 
     render() {
         if (!this.state.post) {
@@ -32,9 +43,11 @@ class SinglePost extends React.Component {
 
             <AuthorName authorId={this.state.post.userId} />
 
-            <div>sdlfkjdsflkdjsfld</div>
+            {this.state.post.body}
+            <hr />
 
-            {/*  <UserLatestPosts authorId={this.state.post.userId} /> */}
+
+            <AuthorLatestPost postId={this.props.match.params.postId} />
         </main>
     }
 }
