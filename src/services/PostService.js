@@ -2,13 +2,11 @@ import React from 'react'
 import Post from '../entities/Post'
 
 
-
 const FetchPosts = () => {
 
     return fetch('https://jsonplaceholder.typicode.com/posts')
         .then(res => res.json())
-        .then(data => data.map(post => new Post(post)))
-
+        .then(data => data.map(post => new Post(post)));
 }
 
 const fetchSinglePost = (id) => {
@@ -25,5 +23,15 @@ const fetchAuthorPost = (idAuthor) => {
 
 }
 
+const fetchNumberOfPosts = (idAuthor) => {
 
-export { FetchPosts, fetchSinglePost, fetchAuthorPost };
+    return fetch('https://jsonplaceholder.typicode.com/posts?userId=' + idAuthor)
+    .then(res => res.json())
+    .then(data => data.length)
+
+}
+
+
+
+
+export { FetchPosts, fetchSinglePost, fetchAuthorPost, fetchNumberOfPosts };
