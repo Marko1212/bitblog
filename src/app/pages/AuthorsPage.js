@@ -8,24 +8,18 @@ class AuthorsPage extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            allAuthor: [],
-            counterPostsPerAuthor: []
+            allAuthor: []
         }
     }
 
     componentDidMount() {
-        const array = []
+
         FetchAuthors().then(authors => this.setState({ allAuthor: authors }))
-        for (let i = 0; i < this.state.allAuthor.length; i++) {
-        fetchNumberOfPosts(this.state.allAuthor[i].id).then(data => array.push(data)).then(data => this.setState({counterPostsPerAuthor: data}))
-        }
-        console.log(array)
     }
 
     render() {
 
         console.log(this.state.allAuthor);
-        console.log(this.state.counterPostsPerAuthor);
 
         if (this.state.allAuthor.length === 0) {
             return <h3>Loading...</h3>
