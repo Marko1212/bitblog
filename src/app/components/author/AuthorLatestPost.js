@@ -15,7 +15,7 @@ class AuthorLatestPost extends React.Component {
     }
 
     componentDidMount() {
-        fetchAuthorPost(this.props.postId).then(allPost => this.setState({ allPostsAuthor: allPost }))
+        fetchAuthorPost(this.props.authorId).then(allPost => this.setState({ allPostsAuthor: allPost }))
     }
 
 
@@ -26,7 +26,9 @@ class AuthorLatestPost extends React.Component {
             return <h4>loading...</h4>
         }
 
-        const latestPost = this.state.allPostsAuthor.map(res => {
+        const postsFromSameAuthor = this.state.allPostsAuthor.sort(function (post1, post2) { return parseInt(post2.id) - parseInt(post1.id) }).slice(0, 3)
+
+        const latestPost = postsFromSameAuthor.map(res => {
 
             return <p><Link to={`/posts/${res.id}`}>{res.title}  </Link></p >
 
@@ -36,9 +38,9 @@ class AuthorLatestPost extends React.Component {
 
         return <>
 
-            <h3>3 more posts from same author</h3>
+            <h3>3 latest posts from same author</h3>
 
-            {latestPost.slice(0, 3)}
+            {latestPost}
 
 
         </>

@@ -47,7 +47,7 @@ class SinglePost extends React.Component {
             <hr />
 
 
-            <AuthorLatestPost postId={this.props.match.params.postId} />
+            <AuthorLatestPost authorId={/* this.props.match.params.postId */this.state.post.userId} />
         </main>
     }
 }

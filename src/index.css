@@ -36,26 +36,35 @@ main {
 
 }
 
-.nameSurname {
-  border: 1px solid black;
-  display: block;
-  margin-left: 0%;
-}
-
-.nameSurname > h1 {
-font-size: 1rem;
-line-height: 1%;
-}
 
 
 .flex-container {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
 }
 .nameSurnameBox > h1 {
-  font-size: 2rem;
+  font-size: 1rem;
+
 
 }
+
+.image {
+  width: 18rem;
+}
+
+section > div {
+  margin-right: 8%;
+}
+
+section {
+  padding: 2rem;
+}
+
+iframe {
+  margin-top: 3%
+}
+
 
 
 

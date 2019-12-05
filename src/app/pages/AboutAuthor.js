@@ -28,10 +28,8 @@ class AboutAuthor extends React.Component {
 
         return <main>
 
-            <div className='nameSurname flex-container'>
-
-                <img src='https://www.primepost.ng/wp-content/uploads/2018/12/writer.jpg' />
-
+            <div className=' flex-container'>
+                <div><img className='image' src='https://www.primepost.ng/wp-content/uploads/2018/12/writer.jpg' /></div>
                 <div className='nameSurnameBox'>
                     <h1>Name: {this.state.author.name}</h1>
                     <h1>Username: {this.state.author.username}</h1>
@@ -39,10 +37,11 @@ class AboutAuthor extends React.Component {
                     <h1>phone: {this.state.author.phone}</h1>
 
                 </div>
-
             </div>
 
             <AuthorAddress address={this.state.author} />
+
+
 
 
         </main>

@@ -11,6 +11,9 @@ class Author {
         this.zipcode = authorData.address.zipcode;
         this.email = authorData.email;
         this.phone = authorData.phone;
+        this.lat = authorData.address.geo.lat;
+        this.lng = authorData.address.geo.lng;
+
     }
 }
 export default Author;
