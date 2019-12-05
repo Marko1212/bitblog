@@ -13,6 +13,8 @@ class Author {
         this.phone = authorData.phone;
         this.lat = authorData.address.geo.lat;
         this.lng = authorData.address.geo.lng;
+        this.company = authorData.company.name;
+        this.slogan = authorData.company.catchPhrase;
 
     }
 }

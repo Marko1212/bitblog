@@ -1,7 +1,8 @@
 import React from 'react'
 import { fetchSingleAuthor } from '../../services/AuthorService'
 import AuthorAddress from '../components/author/AuthorAddress'
-
+import AuthorCompany from '../components/author/AuthorCompany'
+import { Link } from "react-router-dom";
 
 class AboutAuthor extends React.Component {
     constructor(props) {
@@ -27,7 +28,7 @@ class AboutAuthor extends React.Component {
 
 
         return <main>
-
+            <p > <Link to="/authors">&#8592; All Authors</Link></p>
             <div className=' flex-container'>
                 <div><img className='image' src='https://www.primepost.ng/wp-content/uploads/2018/12/writer.jpg' /></div>
                 <div className='nameSurnameBox'>
@@ -40,7 +41,7 @@ class AboutAuthor extends React.Component {
             </div>
 
             <AuthorAddress address={this.state.author} />
-
+            <AuthorCompany company={this.state.author} />
 
 
 
