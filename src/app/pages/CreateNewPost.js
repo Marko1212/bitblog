@@ -50,7 +50,8 @@ export class CreateNewPost extends Component {
     render() {
         return (
             <Fragment>
-                <div>
+                <main>
+                <div className>
                     <p className="title">Title:</p>
                     <div id="post-title">
                     </div>
@@ -64,6 +65,7 @@ export class CreateNewPost extends Component {
                     <Link to="/post/new"><input type="button" value="Cancel" className="cancel" onClick={this.handleCancel} /></Link>
                     <Link to="/home"><input type="button" value="Post" onClick={this.createPost} className="create-post" /></Link>
                 </div>
+                </main>
             </Fragment>
         );
     }
