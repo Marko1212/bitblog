@@ -30,7 +30,7 @@ class AboutAuthor extends React.Component {
         return <main>
             <p > <Link to="/authors">&#8592; All Authors</Link></p>
             <div className=' flex-container'>
-                <div><img className='image' src='https://www.primepost.ng/wp-content/uploads/2018/12/writer.jpg' /></div>
+                <div><img className='image' src='https://comps.gograph.com/noam-chomsky-caricature_gg106723099.jpg' /></div>
                 <div className='nameSurnameBox'>
                     <h1>Name: {this.state.author.name}</h1>
                     <h1>Username: {this.state.author.username}</h1>
