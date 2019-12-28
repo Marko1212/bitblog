@@ -27,8 +27,8 @@ class PostPage extends React.Component {
         if (this.state.allPosts.length === 0) {
             return <h2>Loading...</h2>
         }
-        const mapPost = this.state.allPosts.map(post => {
-            return <PostSnippet post={{ id: post.id, title: post.title, text: post.body }} />
+        const mapPost = this.state.allPosts.map((post, i) => {
+            return <PostSnippet key={i} post={{ id: post.id, title: post.title, text: post.body }} />
 
 
         })

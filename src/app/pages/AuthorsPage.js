@@ -30,12 +30,12 @@ class AuthorsPage extends React.Component {
             <main>
                 <h1 className='homeHeader'>AUTHORS ({this.state.allAuthor.length})</h1>
 
-                {this.state.allAuthor.map(author => {
+                {this.state.allAuthor.map((author, i) => {
 
-                    return <p className='authorName'><Link to={`/authors/${author.id}`}>{author.name}
+                    return <div key={i} className='authorName'><Link to={`/authors/${author.id}`}>{author.name}
                         <PostCounter authorId={author.id} />
 
-                    </Link></p >
+                    </Link></div >
 
 
 

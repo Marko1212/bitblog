@@ -51,20 +51,20 @@ export class CreateNewPost extends Component {
         return (
             <Fragment>
                 <main>
-                <div className>
-                    <p className="title">Title:</p>
-                    <div id="post-title">
+                    <div>
+                        <p className="title">Title:</p>
+                        <div id="post-title">
+                        </div>
+                        <input type="text" name="title" id="title" placeholder="Enter title of the post..." onChange={this.handleTitle} value={this.state.title} />
+                        <p className="text-content">Text content: </p>
+                        <textarea rows="10" cols="150" id="content" placeholder="Enter content of the post..." onChange={this.handleBody} value={this.state.body}>
+                        </textarea>
+                        <div className="validation">
+                            {this.state.validationMessage ? "" : "Input required."}
+                        </div>
+                        <Link to="/post/new"><input type="button" value="Cancel" className="cancel" onClick={this.handleCancel} /></Link>
+                        <Link to="/home"><input type="button" value="Post" onClick={this.createPost} className="create-post" /></Link>
                     </div>
-                    <input type="text" name="title" id="title" placeholder="Enter title of the post..." onChange={this.handleTitle} value={this.state.title} />
-                    <p className="text-content">Text content: </p>
-                    <textarea rows="10" cols="150" id="content" placeholder="Enter content of the post..." onChange={this.handleBody} value={this.state.body}>
-                    </textarea>
-                    <div className="validation">
-                        {this.state.validationMessage ? "" : "Input required."}
-                    </div>
-                    <Link to="/post/new"><input type="button" value="Cancel" className="cancel" onClick={this.handleCancel} /></Link>
-                    <Link to="/home"><input type="button" value="Post" onClick={this.createPost} className="create-post" /></Link>
-                </div>
                 </main>
             </Fragment>
         );

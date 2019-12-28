@@ -28,9 +28,9 @@ class AuthorLatestPost extends React.Component {
 
         const postsFromSameAuthor = this.state.allPostsAuthor.sort(function (post1, post2) { return parseInt(post2.id) - parseInt(post1.id) }).slice(0, 3)
 
-        const latestPost = postsFromSameAuthor.map(res => {
+        const latestPost = postsFromSameAuthor.map((res, i) => {
 
-            return <p><Link to={`/posts/${res.id}`}>{res.title}  </Link></p >
+            return <p key={i}><Link to={`/posts/${res.id}`}>{res.title}  </Link></p >
 
 
         })
