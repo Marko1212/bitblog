@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react'
+import React, { Fragment } from 'react'
 
 const Footer = (props) => {
 
@@ -8,8 +8,8 @@ const Footer = (props) => {
             <footer className="page-footer">
 
                 {/* <div className="footer-copyright" */}
-                    <div className="container center footer">
-                        © 2019 Copyright Text
+                <div className="container center footer">
+                    © {new Date().getFullYear()} Copyright Text
                     </div>
                 {/* </div> */}
             </footer>
